@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Controle Financeiro</h1>
+    </header>
+
+    <main>
+        <!-- Cartões de Entradas, Saídas e Total -->
+        <section class="summary">
+            <div class="card">
+                <h3>Entradas</h3>
+                <p id="entradas">R$ 0,00</p>
+            </div>
+            <div class="card">
+                <h3>Saídas</h3>
+                <p id="saidas">R$ 0,00</p>
+            </div>
+            <div class="card">
+                <h3>Total</h3>
+                <p id="total">R$ 0,00</p>
+            </div>
+        </section>
+
+        <!-- Formulário para adicionar despesas -->
+        <section class="expense-form">
+            <input type="text" id="descricao" placeholder="Descrição">
+            <input type="number" id="valor" placeholder="Valor">
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="tipo" value="entrada" checked> Entrada
+                </label>
+                <label>
+                    <input type="radio" name="tipo" value="saida"> Saída
+                </label>
+            </div>
+            <button id="adicionar">Adicionar</button>
+        </section>
+
+        <!-- Tabela de despesas -->
+        <section class="expense-list">
+            <h2 class="desh2">Despesas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Tipo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="despesas-lista">
+                    <!-- As despesas serão listadas aqui -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
